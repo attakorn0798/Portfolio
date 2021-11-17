@@ -14,3 +14,22 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout {
+  background-color: #ffffff;
+}
+
+.h1{
+  font-size: 2rem;
+  font-family: 'Permanent Marker', cursive;
+  animation-name: text;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  background-color: rgba(255, 255,255, 0.8);
+}
