@@ -1,6 +1,7 @@
-.sider{
-    overflow: 'auto';
-    height: '100vh';
-    position: 'fixed';
-    left: 0
+.sider {
+  position: fixed !important;
+  height: 150vh;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
 }

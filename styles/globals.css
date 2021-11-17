@@ -15,12 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-.logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
 .site-layout {
   background-color: #ffffff;
 }
@@ -33,3 +27,13 @@ a {
   animation-timing-function: ease-out;
   background-color: rgba(255, 255,255, 0.8);
 }
+
+.mainContnet{
+    margin-left:200px !important;
+}
+
+/* @media (max-width:575px){
+  .normal{
+    margin-left:150px !important;
+  } 
+} */

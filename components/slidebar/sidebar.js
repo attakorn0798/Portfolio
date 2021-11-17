@@ -25,10 +25,8 @@ class sidebar extends React.Component {
     };
     render() {
         return (
-            <Sider collapsible collapsed={this.state.collapsed} onClick={this.toggle} onCollapse={this.onCollapse} collapsedWidth={0} style={{
-                left: 0,
-                zIndex: 1000,
-            }}>
+            <Layout>
+            <Sider collapsible collapsed={this.state.collapsed} onClick={this.toggle} onCollapse={this.onCollapse} collapsedWidth={0} className={styles.sider}>
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" mode="vertical">
                     <Menu.Item key="1" icon={<PieChartOutlined />} smooth to="/#about" >
                         <Link href="/#about" className="links">About</Link>
@@ -48,8 +46,17 @@ class sidebar extends React.Component {
                     <Menu.Item key="9" icon={<FileOutlined />}>
                         Files
                     </Menu.Item>
-                </Menu>
+                </Menu>              
             </Sider>
+            <Layout>
+            <Content
+            className={this.state.collapsed ? "normal" : "mainContnet"}
+            >
+           
+            {this.props.children}
+            </Content>
+          </Layout>
+          </Layout>
         );
     }
 }
