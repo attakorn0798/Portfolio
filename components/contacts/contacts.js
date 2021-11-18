@@ -3,8 +3,10 @@ import React, { useState, Component } from 'react';
 import emailjs from 'emailjs-com';
 import styles from './contacts.module.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function contacts() {
+    let { t } = useTranslation();
     const [form] = Form.useForm();
 
     const onFinish = (formData) => {
@@ -36,7 +38,7 @@ export default function contacts() {
         <>
             <div className={styles.box} id="contact">
                 <ScrollAnimation offset="0" animateIn="fadeInLeft" duration='2.4' animateOnce="true" initiallyVisible={true}>
-                    <h2 className={styles.heading}>Contact</h2>
+                    <h2 className={styles.heading}>{t('common:Contact')}</h2>
                 </ScrollAnimation>
             </div>
             <Form
@@ -57,7 +59,7 @@ export default function contacts() {
                 form={form}
             >
                 <Form.Item
-                    label="Subject"
+                    label={t('common:Subject')}
                     name="subject"
                     type="subject"
                     rules={[
@@ -70,7 +72,7 @@ export default function contacts() {
                     <Input type="subject" name="subject" value="subject" />
                 </Form.Item>
                 <Form.Item
-                    label="Name"
+                    label={t('common:Namee')}
                     name="name"
                     rules={[
                         {
@@ -82,7 +84,7 @@ export default function contacts() {
                     <Input value="name" />
                 </Form.Item>
                 <Form.Item
-                    label="Email"
+                    label={t('common:Email')}
                     name="email"
                     rules={[
                         {
@@ -94,7 +96,7 @@ export default function contacts() {
                     <Input value="email" />
                 </Form.Item>
                 <Form.Item
-                    label="Message"
+                    label={t('common:Message')}
                     name="message"
                     rules={[
                         {
@@ -111,10 +113,10 @@ export default function contacts() {
                 }}
                 >
                     <Button type="primary" htmlType="submit" style={{ marginRight: "8px" }}>
-                        Submit
+                    {t('common:Submit')}
                     </Button>
                     <Button htmlType="button" onClick={onReset}>
-                        Reset
+                    {t('common:Reset')}
                     </Button>
                 </Form.Item>
             </Form>

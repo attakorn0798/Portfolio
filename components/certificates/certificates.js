@@ -3,14 +3,16 @@ import styles from './certificates.module.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 import { Layout, Menu, Breadcrumb, Image, Row, Col, DemoBox, Card } from 'antd';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function certificates() {
+    let { t } = useTranslation();
     const { Meta } = Card;
     return (
         <>
         <div className={styles.box} id="certificates">
             <ScrollAnimation offset="0" animateIn="fadeInLeft" duration='2.4' animateOnce="true" initiallyVisible={true}>
-                <h2 className={styles.heading}>Certificates</h2>
+                <h2 className={styles.heading}>{t('common:Certificates')}</h2>
             </ScrollAnimation>
         </div>
         <div className={styles.grid}>

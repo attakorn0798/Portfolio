@@ -47,9 +47,7 @@ function Home() {
                     </div>
                 ))}
             </div>
-          <h1 className={styles.title}>
-          Welcome {t('common:Home')}
-        </h1>
+          
           <div className={styles['condiv']} style={{ padding: 24 }}>
             <Image
               className={styles.profilepic}
@@ -67,7 +65,7 @@ function Home() {
             </div>
             <ReactTypingEffect text={[t('common:Name')]} speed={80} eraseDelay={200} className={styles.name} />
             <Button type="primary" shape="round" href="https://google.com" className="h1" style={{ background: "linear-gradient(to left,rgba(75,19,79,0.8) ,rgba(201,75,75,0.6))", borderColor: "black", }}>
-              VIEW MY CV<FileOutlined />
+              {t('common:viewcv')}<FileOutlined />
             </Button>
           </div>
           <About />

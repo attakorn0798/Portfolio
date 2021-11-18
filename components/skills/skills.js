@@ -3,16 +3,18 @@ import React, { useState } from 'react';
 import { Layout, Menu, Breadcrumb, Image, Row, Col, DemoBox, Card } from 'antd';
 import styles from './skills.module.css'
 import ScrollAnimation from 'react-animate-on-scroll';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function skills() {
+    let { t } = useTranslation();
     const { Meta } = Card;
     const style = { background: '#0092ff', padding: '8px 0' };
     return (
         <>
         <div className={styles.box} id="skills">
             <ScrollAnimation offset="0" animateIn="fadeInLeft" duration='2' animateOnce="true" initiallyVisible={true}>
-                <span className={styles.head}>skills</span>
-                <h2 className={styles.heading}>language and technologies</h2>
+                <span className={styles.head}>{t('common:skills')}</span>
+                <h2 className={styles.heading}>{t('common:tech')}</h2>
             </ScrollAnimation>
         </div>
         <div className={styles.grid}>

@@ -4,14 +4,16 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 import { MdSchool } from 'react-icons/md';
 import { FaSchool } from 'react-icons/fa';
+import useTranslation from 'next-translate/useTranslation';
 
-class Education extends Component {
-    render() {
+
+function Education() {
+    let { t } = useTranslation();
         return (
                 <div className={classes.box} id="education">
                     <ScrollAnimation offset="0" animateIn="fadeInLeft" duration='2' animateOnce="true" initiallyVisible ={true}>
-                     <span  className={classes.head}>MY JOURNEY</span>
-                     <h2 className={classes.heading}>EDUCATION</h2>
+                     <span  className={classes.head}>{t('common:exp')}</span>
+                     <h2 className={classes.heading}>{t('common:EDUCATION')}</h2>
                     <section className={classes.container}>
                         <div className={classes.container_content}>
                             <div className={classes.row}>
@@ -23,8 +25,8 @@ class Education extends Component {
                                                     <FaSchool />     
                                                 </div>
                                                 <div className={classes.label}>
-                                                <h2 >High School Strisrinan  <span>2014-2017</span></h2>
-                                                <p>I am a member of the student council.</p>
+                                                <h2 >{t('common:school')}<span>{t('common:sy')}</span></h2>
+                                                <p>{t('common:schooldes')}</p>
                                                 </div>
                                             </article>
                                         </ScrollAnimation>
@@ -34,8 +36,8 @@ class Education extends Component {
                                                     <MdSchool />     
                                                 </div>
                                                 <div className={classes.label}>
-                                                <h2 >Graduated from Chaing Mai Univercity <span>2017-2021</span></h2>
-                                                <p>Completed one month Internship in React Js with Internity Foundation</p>
+                                                <h2 >{t('common:univercity')}<span>{t('common:uy')}</span></h2>
+                                                <p>{t('common:udes')}</p>
                                                 </div>
                                                 <div className={classes.timeline_entry_inner}><div  className={classes.timeline_icon_3||classes.color_none}></div></div>
                                             </article>
@@ -48,8 +50,8 @@ class Education extends Component {
                     </ScrollAnimation>
                 </div>
      
-        )
-    }
+        );
+    
 }
 
 export default Education;

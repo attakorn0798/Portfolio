@@ -11,6 +11,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 .name {
@@ -56,3 +57,4 @@
 .locale .locale-link a.locale-selected {
   color: #000000;
 }
+

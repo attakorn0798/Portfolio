@@ -2,9 +2,9 @@ import 'antd/dist/antd.css'
 import React, { useState, Component } from 'react';
 import { Layout, Menu, Breadcrumb, Image, Icon } from 'antd';
 import {
+    BookOutlined,
     DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
+    MailOutlined,
     TeamOutlined,
     UserOutlined,
 } from '@ant-design/icons';
@@ -28,23 +28,18 @@ class sidebar extends React.Component {
             <Layout>
             <Sider collapsible collapsed={this.state.collapsed} onClick={this.toggle} onCollapse={this.onCollapse} collapsedWidth={0} className={styles.sider}>
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" mode="vertical">
-                    <Menu.Item key="1" icon={<PieChartOutlined />} smooth to="/#about" >
+                    <Menu.Item key="1" icon={<UserOutlined />} >
                         <Link href="/#about" className="links">About</Link>
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}>
+                    <Menu.Item key="2" icon={<BookOutlined />}>
                         <Link href="/#education" className="links">Education</Link>
                     </Menu.Item>
-                    <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-                        <Menu.Item key="3">Tom</Menu.Item>
-                        <Menu.Item key="4">Bill</Menu.Item>
-                        <Menu.Item key="5">Alex</Menu.Item>
+                    <SubMenu key="sub1" icon={<DesktopOutlined />} title="Skills">
+                        <Menu.Item key="3"><Link href="/#skills" className="links">language and tech</Link></Menu.Item>
+                        <Menu.Item key="4"><Link href="/#certificates" className="links">certificates</Link></Menu.Item>
                     </SubMenu>
-                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                        <Menu.Item key="6">Team 1</Menu.Item>
-                        <Menu.Item key="8">Team 2</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="9" icon={<FileOutlined />}>
-                        Files
+                    <Menu.Item key="5" icon={<MailOutlined />}>
+                    <Link href="/#contact" className="links">Contact</Link>
                     </Menu.Item>
                 </Menu>              
             </Sider>
