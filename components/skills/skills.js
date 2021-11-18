@@ -18,7 +18,7 @@ export default function skills() {
             </ScrollAnimation>
         </div>
         <div className={styles.grid}>
-                    <Row justify="center" align="top" gutter={[0, 8]}>
+                    <Row justify="center" align="top" gutter={[0, 8]} >
                         <Col xs={42} sm={7} lg={6} md={7} xl={3}>
                             <Card
                                 hoverable
@@ -35,7 +35,7 @@ export default function skills() {
                             <Card
                                 hoverable
                                 className={styles.image_container}
-                                cover={<img alt="example" src='images/skills/react.png' />}
+                                cover={<img alt="example" src='images/skills/react.svg.png' />}
                             >
                                 <Meta description="React"
                                     className={styles.title} />

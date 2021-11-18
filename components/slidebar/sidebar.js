@@ -28,17 +28,20 @@ class sidebar extends React.Component {
             <Layout>
             <Sider collapsible collapsed={this.state.collapsed} onClick={this.toggle} onCollapse={this.onCollapse} collapsedWidth={0} className={styles.sider}>
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" mode="vertical">
-                    <Menu.Item key="1" icon={<UserOutlined />} >
+                <Menu.Item key="1" >
+                        <Link href="/" className="links">ATTAKORN TANAME</Link>
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<UserOutlined />} >
                         <Link href="/#about" className="links">About</Link>
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<BookOutlined />}>
+                    <Menu.Item key="3" icon={<BookOutlined />}>
                         <Link href="/#education" className="links">Education</Link>
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<DesktopOutlined />} title="Skills">
-                        <Menu.Item key="3"><Link href="/#skills" className="links">language and tech</Link></Menu.Item>
-                        <Menu.Item key="4"><Link href="/#certificates" className="links">certificates</Link></Menu.Item>
+                        <Menu.Item key="4"><Link href="/#skills" className="links">language and tech</Link></Menu.Item>
+                        <Menu.Item key="5"><Link href="/#certificates" className="links">certificates</Link></Menu.Item>
                     </SubMenu>
-                    <Menu.Item key="5" icon={<MailOutlined />}>
+                    <Menu.Item key="6" icon={<MailOutlined />}>
                     <Link href="/#contact" className="links">Contact</Link>
                     </Menu.Item>
                 </Menu>              
