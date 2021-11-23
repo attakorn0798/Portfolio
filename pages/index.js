@@ -52,19 +52,19 @@ function Home() {
             <Image
               className={styles.profilepic}
               preview={{ visible: false }}
-              src='images/2.jpeg'
+              src='images/5.jpg'
               onClick={() => setVisible(true)}
             />
             <div style={{ display: 'none' }}>
               <Image.PreviewGroup preview={{ visible, onVisibleChange: vis => setVisible(vis) }}>
+              <Image src='images/5.jpg' />
+              <Image src='images/6.jpg' />
                 <Image src='images/2.jpeg' />
                 <Image src='images/1.jpeg' />
-                <Image src='images/3.jpeg' />
-                <Image src='images/4.jpeg' />
               </Image.PreviewGroup>
             </div>
             <ReactTypingEffect text={[t('common:Name')]} speed={80} eraseDelay={200} className={styles.name} />
-            <Button type="primary" shape="round" href="https://drive.google.com/file/d/1CmT82Lskodg5VtDDNBdsh1NrNo2RoMps/view?usp=sharing" className="h1" style={{ background: "linear-gradient(to left,rgba(75,19,79,0.8) ,rgba(201,75,75,0.6))", borderColor: "black", }}>
+            <Button type="primary" shape="round" href="https://drive.google.com/file/d/1qcRXDLB10V-9HL7S2hOL1Lb0INNXsI36/view?usp=sharing" className="h1" style={{ background: "linear-gradient(to left,rgba(75,19,79,0.8) ,rgba(201,75,75,0.6))", borderColor: "black", }}>
               {t('common:viewcv')}<FileOutlined />
             </Button>
           </div>
