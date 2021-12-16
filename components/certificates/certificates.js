@@ -17,6 +17,26 @@ export default function certificates() {
         </div>
         <div className={styles.grid}>
                     <Row justify="center" align="top" gutter={[48, 0]}>
+                    <Col flex="auto" xs={42} sm={7} lg={6} md={7} xl={3}>
+                            <Card
+                                hoverable
+                                className={styles.image_container}
+                                cover={<Image alt="example" src='images/certificates/res_web.PNG' />}
+                            >
+                                <Meta description="Responsive Web Design Developer Certificate"
+                                    className={styles.title} />
+                            </Card>
+                        </Col>
+                        <Col flex="auto" xs={42} sm={7} lg={6} md={7} xl={3}>
+                            <Card
+                                hoverable
+                                className={styles.image_container}
+                                cover={<Image alt="example" src='images/certificates/java.PNG' />}
+                            >
+                                <Meta description="JavaScript Algorithms and Data Structures Developer Certificate"
+                                    className={styles.title} />
+                            </Card>
+                        </Col>
                         <Col flex="auto" xs={42} sm={7} lg={6} md={7} xl={3}>
                             <Card
                                 hoverable
