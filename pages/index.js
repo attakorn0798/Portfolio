@@ -64,7 +64,7 @@ function Home() {
               </Image.PreviewGroup>
             </div>
             <ReactTypingEffect text={[t('common:Name')]} speed={80} eraseDelay={200} className={styles.name} />
-            <Button type="primary" shape="round" href="https://drive.google.com/file/d/18HCQrVwiSBxQ1moVMK-hJXx8UvEF8SU2/view?usp=sharing" className="h1" style={{ background: "linear-gradient(to left,rgba(75,19,79,0.8) ,rgba(201,75,75,0.6))", borderColor: "black", }}>
+            <Button type="primary" shape="round" href="https://drive.google.com/file/d/1nYp3MkDJFTlX9fa1-froVTx7lgAprnIG/view?usp=sharing" className="h1" style={{ background: "linear-gradient(to left,rgba(75,19,79,0.8) ,rgba(201,75,75,0.6))", borderColor: "black", }}>
               {t('common:viewcv')}<FileOutlined />
             </Button>
           </div>
