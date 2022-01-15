@@ -77,7 +77,7 @@ export default function skills() {
                                 className={styles.image_container}
                                 cover={<img alt="example" src='images/skills/bootstrapr.svg' />}
                             >
-                                <Meta description="Bootstap"
+                                <Meta description="Bootstrap"
                                     className={styles.title} />
                             </Card>
                         </Col>
